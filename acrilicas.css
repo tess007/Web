@@ -1,0 +1,112 @@
+body, html {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.navbar{
+    margin: 0;
+    padding: 0;
+}
+
+.logo1{
+  border-radius: 200px;
+  transition: all 0.3s;
+}
+
+
+.logo1:hover{
+  border-radius: 200px;
+  transform: scale(1.05);
+}
+
+
+#parrafo-title {
+  background-image: url(img/portada.jpg); 
+  background-size: cover; 
+  background-position: center; 
+  color: white; 
+  padding: 50px; 
+  position: relative; 
+  animation: slideDown 1s ease-out;
+}
+
+#parrafo-title p {
+  position: relative;
+  z-index: 2; 
+  font-size: 1.5rem; 
+  line-height: 1.6; 
+}
+
+#parrafo-title::before {
+  content: ''; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); 
+  z-index: 1; 
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-30px); /* Comienza arriba */
+    opacity: 0; /* Comienza invisible */
+  }
+  100% {
+    transform: translateY(0); /* Finaliza en la posición original */
+    opacity: 1; /* Se vuelve completamente visible */
+  }
+}
+
+
+.card {
+    filter: drop-shadow(0 0 15px rgb(3, 3, 78));
+    transition: all 0.3s;
+    border-radius: 8px; /* Suaviza los bordes */
+    display: flex;
+    flex-direction: column;
+    min-height: 400px; /* Altura mínima para todas las tarjetas */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15rem; /* Establecer una altura fija para las imágenes */
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.card-body {
+    flex-grow: 1; /* Asegura que el contenido de la tarjeta ocupe el espacio restante */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    text-align: center;
+}
+
+/* Media queries para asegurarse de que las tarjetas se ajusten a pantallas más pequeñas */
+@media (max-width: 576px) {
+    .card-img-top {
+        height: 12rem; /* Imágenes más pequeñas en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 14rem; /* Imágenes más grandes en pantallas medianas */
+    }
+}
+
+
+
+
+
+
